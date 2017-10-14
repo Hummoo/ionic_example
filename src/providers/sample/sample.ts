@@ -1,6 +1,7 @@
+import 'rxjs/add/operator/map';
+
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
 
 /*
   Generated class for the SampleProvider provider.
@@ -11,7 +12,9 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class SampleProvider {
 
-  constructor(public http: Http) {
+  constructor(
+    public http: Http
+  ) {
     console.log('Hello SampleProvider Provider');
   }
 
