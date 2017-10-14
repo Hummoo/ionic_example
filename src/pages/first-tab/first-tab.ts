@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { SampleFirebaseProvider } from '../../providers/sample-firebase/sample-firebase';
+
 /**
  * Generated class for the FirstTabPage page.
  *
@@ -15,7 +17,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FirstTabPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private sampleFirebaseProvider: SampleFirebaseProvider
+  ) {
   }
 
   ionViewDidLoad() {
@@ -24,6 +30,10 @@ export class FirstTabPage {
 
   navigateToTestSliderPage() {
     this.navCtrl.push('TestSliderPage');
+  }
+
+  doAdd() {
+    this.sampleFirebaseProvider.testAdd();
   }
 
 }
