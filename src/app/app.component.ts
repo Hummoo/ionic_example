@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MenuController, Nav, Platform } from 'ionic-angular';
 
 import { FirstTabPage } from '../pages/first-tab/first-tab';
+import { IntroPage } from '../pages/intro/intro';
 import { SecondTabPage } from '../pages/second-tab/second-tab';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -25,7 +26,7 @@ export class MyApp {
     splashScreen: SplashScreen,
     public menu: MenuController,
   ) {
-    this.rootPage = TabsPage;
+    this.rootPage = IntroPage;
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

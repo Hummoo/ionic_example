@@ -8,17 +8,19 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { FirstTabPage } from '../pages/first-tab/first-tab';
+import { IntroPage } from '../pages/intro/intro';
 import { SecondTabPage } from '../pages/second-tab/second-tab';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ThirdTabPage } from '../pages/third-tab/third-tab';
+import { SampleFirebaseProvider } from '../providers/sample-firebase/sample-firebase';
 import { SampleProvider } from '../providers/sample/sample';
 import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './app.firebase.config';
-import { SampleFirebaseProvider } from '../providers/sample-firebase/sample-firebase';
 
 @NgModule({
   declarations: [
     MyApp,
+    IntroPage,
     TabsPage,
     FirstTabPage,
     SecondTabPage,
@@ -34,6 +36,7 @@ import { SampleFirebaseProvider } from '../providers/sample-firebase/sample-fire
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    IntroPage,
     TabsPage,
     FirstTabPage,
     SecondTabPage,
