@@ -9,6 +9,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { FirstTabPage } from '../pages/first-tab/first-tab';
 import { IntroPage } from '../pages/intro/intro';
+import { MusicPage } from '../pages/music/music';
+import { NewsFeedPage } from '../pages/news-feed/news-feed';
 import { SecondTabPage } from '../pages/second-tab/second-tab';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ThemingPage } from '../pages/theming/theming';
@@ -32,7 +34,9 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     LoginPage,
     ThemingPage,
     VimeoPage,
-    YoutubePage
+    YoutubePage,
+    MusicPage,
+    NewsFeedPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,9 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     LoginPage,
     ThemingPage,
     VimeoPage,
-    YoutubePage
+    YoutubePage,
+    MusicPage,
+    NewsFeedPage
   ],
   providers: [
     StatusBar,
