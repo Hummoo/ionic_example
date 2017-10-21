@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { FirstTabPage } from '../first-tab/first-tab';
 import { SecondTabPage } from '../second-tab/second-tab';
+import { ThemingPage } from '../theming/theming';
 import { ThirdTabPage } from '../third-tab/third-tab';
 
 /**
@@ -21,6 +22,7 @@ export class TabsPage {
   tab1Root: any = FirstTabPage;
   tab2Root: any = SecondTabPage;
   tab3Root: any = ThirdTabPage;
+  tabTheming: any = ThemingPage;
   selectedIndex: number;
 
   constructor(
