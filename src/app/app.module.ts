@@ -1,3 +1,5 @@
+import { ProfilePage } from '../pages/profile/profile';
+import { ParallaxHeaderDirective } from './../directives/parallax-header/parallax-header';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,7 +38,9 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     VimeoPage,
     YoutubePage,
     MusicPage,
-    NewsFeedPage
+    NewsFeedPage,
+    ProfilePage,
+    ParallaxHeaderDirective
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,8 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     VimeoPage,
     YoutubePage,
     MusicPage,
-    NewsFeedPage
+    NewsFeedPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,

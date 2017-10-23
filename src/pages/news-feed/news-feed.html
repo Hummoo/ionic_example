@@ -1,18 +1,33 @@
-<!--
-  Generated template for the NewsFeedPage page.
+<ion-header no-border>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>NewsFeed</ion-title>
-  </ion-navbar>
+  <ion-navbar color="secondary"></ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content fullscreen parallax-header>
+  <div class="header-image"></div>
+  <div class="main-content">
+    <ion-segment [(ngModel)]="stream">
+      <ion-segment-button value="newest">Newest</ion-segment-button>
+      <ion-segment-button value="popular">Popular</ion-segment-button>
+      <ion-segment-button value="trending">Trending</ion-segment-button>
+    </ion-segment>
+
+    <div class="news-box">
+      <img class="images" src="assets/img/paris.jpg" alt="">
+      <div class="detail">
+        <h6 class="details">Child Refugees Forced to Work for Nothing</h6>
+        <img src="assets/img/avatar02.jpg" class="avatar" alt="">
+        <p class="blog">NBC Nightly</p>
+        <i class="fa fa-circle dot" style="color:#ffc107" aria-hidden="true"></i>
+        <p class="tag">Politics</p>
+      </div>
+    </div>
+    <br>
+    <div class="pink-panther">
+
+    </div>
+  </div>
 
 </ion-content>

@@ -1,3 +1,4 @@
+import { ProfilePage } from './../profile/profile';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -27,6 +28,7 @@ export class TabsPage {
   tabTheming: any = ThemingPage;
   tabMusic: any = MusicPage;
   tabNewsFeed: any = NewsFeedPage;
+  tabProfileRoot: any = ProfilePage;
   selectedIndex: number;
 
   constructor(

@@ -1,3 +1,54 @@
 page-news-feed {
-
+  .header-image {
+    background-image: url('../assets/img/newsfeed.jpg');
+    height: 50vh;
+  }
+  .main-content {
+    padding: 20px;
+    background-color: white;
+  }
+  .scroll-content {
+    padding-top: 0 !important;
+  }
+  ion-header {
+    -webkit-backdrop-filter: blur(8px);
+  }
+  ion-navbar {
+    opacity: 0.4;
+    box-shadow: 0px 1px 13px 1px rgba(0, 0, 0, 0);
+  }
+  .news-box {
+    padding-top: 10px;
+    position: relative;
+    top: 2vh;
+    padding-bottom: 10px;
+  }
+  .images {
+    width: 32%;
+  }
+  .detail {
+    font-family: open-sans;
+  }
+  .details {
+    position: absolute;
+    left: 33vw;
+  }
+  .avatar {
+    position: absolute;
+    left: 33vw;
+    margin-top: -37px;
+    width: 7%;
+  }
+  .tag {
+    font-family: open-sans;
+    color: #b7c4cb;
+    float: right;
+    margin-top: -35px;
+  }
+  .dot {
+    position: absolute;
+    font-size: 20px;
+    margin-top: -30px;
+    right: 16vw;
+  }
 }
