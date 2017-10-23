@@ -32,6 +32,10 @@ export class FirstTabPage {
     this.navCtrl.push('TestSliderPage');
   }
 
+  navigateToTestReorderPage() {
+    this.navCtrl.push('TestReorderPage');
+  }
+
   doAdd() {
     this.sampleFirebaseProvider.testAdd();
   }
