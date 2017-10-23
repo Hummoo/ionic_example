@@ -1,3 +1,4 @@
+import { TestInternationalizationPage } from '../test-internationalization/test-internationalization';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -36,6 +37,9 @@ export class FirstTabPage {
     this.navCtrl.push('TestReorderPage');
   }
 
+  navigateToTestInternationalizationPage() {
+    this.navCtrl.push(TestInternationalizationPage);
+  }
   doAdd() {
     this.sampleFirebaseProvider.testAdd();
   }

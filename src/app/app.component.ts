@@ -1,3 +1,4 @@
+import { TranslateService } from '@ngx-translate/core';
 import { TabsPage } from './../pages/tabs/tabs';
 import { Component, ViewChild } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,8 +26,13 @@ export class MyApp {
     statusBar: StatusBar,
     splashScreen: SplashScreen,
     public menu: MenuController,
+    translate: TranslateService
   ) {
     this.rootPage = TabsPage;
+
+    //Init i18n
+    translate.setDefaultLang('th');
+    translate.use('th');
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

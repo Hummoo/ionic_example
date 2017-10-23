@@ -24,6 +24,11 @@ import { VimeoPage } from './../pages/videos/vimeo';
 import { YoutubePage } from './../pages/videos/youtube';
 import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './app.firebase.config';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TestInternationalizationPage } from '../pages/test-internationalization/test-internationalization';
+
 
 @NgModule({
   declarations: [
@@ -40,14 +45,23 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     MusicPage,
     NewsFeedPage,
     ProfilePage,
-    ParallaxHeaderDirective
+    ParallaxHeaderDirective,
+    TestInternationalizationPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -63,7 +77,8 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
     YoutubePage,
     MusicPage,
     NewsFeedPage,
-    ProfilePage
+    ProfilePage,
+    TestInternationalizationPage
   ],
   providers: [
     StatusBar,
@@ -74,3 +89,7 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
   ]
 })
 export class AppModule { }
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
