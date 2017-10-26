@@ -40,6 +40,11 @@ export class FirstTabPage {
   navigateToTestInternationalizationPage() {
     this.navCtrl.push(TestInternationalizationPage);
   }
+
+  navigateToPage(pageName: string) {
+    this.navCtrl.push(pageName);
+  }
+
   doAdd() {
     this.sampleFirebaseProvider.testAdd();
   }
