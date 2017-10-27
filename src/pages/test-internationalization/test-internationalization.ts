@@ -20,7 +20,7 @@ export class TestInternationalizationPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public translateService: TranslateService) {
     //this.selectLang = this.translateService.getDefaultLang();
-    alert(`Current lang : ${this.translateService.currentLang}`);
+    //alert(`Current lang : ${this.translateService.currentLang}`);
     this.selectLang = this.translateService.currentLang;
   }
 
@@ -29,7 +29,7 @@ export class TestInternationalizationPage {
   }
 
   changeLanguage(lang: string) {
-    alert(`Select lang : ${lang}`);
+    //alert(`Select lang : ${lang}`);
     this.translateService.use(lang);
   }
 

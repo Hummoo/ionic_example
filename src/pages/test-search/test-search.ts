@@ -3,7 +3,6 @@ import { FormControl } from '@angular/forms';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Observable } from "rxjs/Rx";
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/map';
 

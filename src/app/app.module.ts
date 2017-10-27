@@ -23,7 +23,6 @@ import { LoginPage } from './../pages/login/login';
 import { VimeoPage } from './../pages/videos/vimeo';
 import { YoutubePage } from './../pages/videos/youtube';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { ElasticsearchProvider } from '../providers/elasticsearch/elasticsearch';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -87,7 +86,7 @@ import { SampleDataProvider } from '../providers/sample-data/sample-data';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    ElasticsearchProvider
+    ElasticsearchProvider,
     SampleProvider,
     SampleFirebaseProvider,
     SampleDataProvider

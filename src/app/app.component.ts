@@ -6,7 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MenuController, Nav, Platform } from 'ionic-angular';
 
 import { FirstTabPage } from '../pages/first-tab/first-tab';
-import { IntroPage } from '../pages/intro/intro';
 import { SecondTabPage } from '../pages/second-tab/second-tab';
 
 @Component({
