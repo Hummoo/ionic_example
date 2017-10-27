@@ -2,5 +2,6 @@
   "name": "sample_proj",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {},
+  "elasticsearch_url": "http://localhost:9200/"
 }

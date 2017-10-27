@@ -4,11 +4,11 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
 import { FirstTabPage } from '../pages/first-tab/first-tab';
 import { IntroPage } from '../pages/intro/intro';
 import { MusicPage } from '../pages/music/music';
@@ -23,13 +23,14 @@ import { LoginPage } from './../pages/login/login';
 import { VimeoPage } from './../pages/videos/vimeo';
 import { YoutubePage } from './../pages/videos/youtube';
 import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
+import { ElasticsearchProvider } from '../providers/elasticsearch/elasticsearch';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TestInternationalizationPage } from '../pages/test-internationalization/test-internationalization';
 import { SampleDataProvider } from '../providers/sample-data/sample-data';
-
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { SampleDataProvider } from '../providers/sample-data/sample-data';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
@@ -85,6 +87,7 @@ import { SampleDataProvider } from '../providers/sample-data/sample-data';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    ElasticsearchProvider
     SampleProvider,
     SampleFirebaseProvider,
     SampleDataProvider
