@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,21 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+/* @font-face {
+  font-family: BalooBhai;
+  src: url('../assets/fonts/BalooBhai/BalooBhai.woff2') format('woff2');
+}
+
+* {
+  font-family: BalooBhai;
+}
+
+@font-face {
+  font-family: open-sans;
+  src: url('../assets/fonts/open-sans.woff2') format('woff2');
+}
+
+* {
+  font-family: open-sans;
+} */
