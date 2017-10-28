@@ -31,6 +31,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TestInternationalizationPage } from '../pages/test-internationalization/test-internationalization';
 import { SampleDataProvider } from '../providers/sample-data/sample-data';
 import { MapProvider } from '../providers/map/map';
+import { ConferenceDataProvider } from '../providers/conference-data/conference-data';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { MapProvider } from '../providers/map/map';
     SampleProvider,
     SampleFirebaseProvider,
     SampleDataProvider,
-    MapProvider
+    MapProvider,
+    ConferenceDataProvider
   ]
 })
 export class AppModule { }

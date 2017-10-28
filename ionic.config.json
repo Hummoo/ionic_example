@@ -2,6 +2,8 @@
   "name": "sample_proj",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "elasticsearch_url": "http://localhost:9200/"
 }
