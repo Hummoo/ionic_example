@@ -32,6 +32,7 @@ import { TestInternationalizationPage } from '../pages/test-internationalization
 import { SampleDataProvider } from '../providers/sample-data/sample-data';
 import { MapProvider } from '../providers/map/map';
 import { ConferenceDataProvider } from '../providers/conference-data/conference-data';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { ConferenceDataProvider } from '../providers/conference-data/conference-
     SampleFirebaseProvider,
     SampleDataProvider,
     MapProvider,
-    ConferenceDataProvider
+    ConferenceDataProvider,
+    Geolocation
   ]
 })
 export class AppModule { }

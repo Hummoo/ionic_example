@@ -1,0 +1,26 @@
+<!--
+  Generated template for the TestMap2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Map
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="addMarker()">
+        <ion-icon name="add"></ion-icon>Add Marker</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div #directionsPanel></div>
+    </ion-card-content>
+  </ion-card>
+  <div #map id="map"></div>
+</ion-content>
