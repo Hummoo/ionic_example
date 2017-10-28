@@ -30,6 +30,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TestInternationalizationPage } from '../pages/test-internationalization/test-internationalization';
 import { SampleDataProvider } from '../providers/sample-data/sample-data';
+import { MapProvider } from '../providers/map/map';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { SampleDataProvider } from '../providers/sample-data/sample-data';
     ElasticsearchProvider,
     SampleProvider,
     SampleFirebaseProvider,
-    SampleDataProvider
+    SampleDataProvider,
+    MapProvider
   ]
 })
 export class AppModule { }

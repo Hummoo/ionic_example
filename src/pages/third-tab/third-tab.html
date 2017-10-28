@@ -14,5 +14,24 @@
 
 
 <ion-content padding>
+  <!--<form (ngSubmit)="navigateToMapPage()">-->
+  <ion-item>
+    <ion-label floating>Origin</ion-label>
+    <ion-input type="text" [(ngModel)]="map.origin" name="origin"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Destination</ion-label>
+    <ion-textarea [(ngModel)]="map.dest" name="dest"></ion-textarea>
+  </ion-item>
+  <ion-list>
+    <ion-item *ngFor="let item of map.waypoints; let i = index; trackBy: customTrackBy">
+      <ion-label floating>Waypoint</ion-label>
+      <ion-textarea [(ngModel)]="map.waypoints[i]" name="waypoints"></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="navigateToMapPage()">Go to Map</button>
+  <!--<button ion-button type="submit">Go to Map</button>
+  </form>-->
+  <button ion-button (click)="addWaypoint()">Add a waypoint</button>
 
 </ion-content>
