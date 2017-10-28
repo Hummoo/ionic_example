@@ -1,3 +1,4 @@
+import { HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,6 +16,7 @@ import { SampleProvider } from '../providers/sample/sample';
 import { MyApp } from './app.component';
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { SampleFirebaseProvider } from '../providers/sample-firebase/sample-firebase';
+import { MapProvider } from '../providers/map/map';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,16 @@ import { SampleFirebaseProvider } from '../providers/sample-firebase/sample-fire
     TabsPage,
     FirstTabPage,
     SecondTabPage,
-    ThirdTabPage
+    ThirdTabPage,
+
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,14 +41,15 @@ import { SampleFirebaseProvider } from '../providers/sample-firebase/sample-fire
     TabsPage,
     FirstTabPage,
     SecondTabPage,
-    ThirdTabPage
+    ThirdTabPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     SampleProvider,
-    SampleFirebaseProvider
+    SampleFirebaseProvider,
+    MapProvider
   ]
 })
 export class AppModule { }

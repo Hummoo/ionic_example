@@ -11,15 +11,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-third-tab',
-  templateUrl: 'third-tab.html',
+  templateUrl: 'third-tab.html'
 })
 export class ThirdTabPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  map = { origin: '', dest: '', waypoints: [] }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ThirdTabPage');
   }
+  navigateToMapPage() {
+    console.log(this.map);
+    this.navCtrl.push('MapPage', { origin: this.map.origin, dest: this.map.dest, waypoints: this.map.waypoints });
 
+  }
+
+  addWaypoint() {
+    this.map.waypoints.push('');
+  }
+
+  customTrackBy(index: number, obj: any): any {
+    return index;
+  }
 }
